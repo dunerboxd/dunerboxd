@@ -1,0 +1,17 @@
+name: Keep Alive Runners
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  keep_alive:
+    runs-on: [self-hosted]
+
+    strategy:
+      matrix:
+        runner: [1, 2, 3]  # Adjust according to your runner labels
+
+    steps:
+      - name: Keep Runner Alive
+        run: echo "Keeping runner ${runner} alive"
