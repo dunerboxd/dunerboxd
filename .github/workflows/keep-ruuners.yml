@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        runner: [1, 2, 3]  # Adjust according to your runner labels
+        runner: [1, 2, 3]
 
     steps:
       - name: Keep Runner Alive
